@@ -1,0 +1,356 @@
+/* PALETTE COLORI VIVACI */
+:root {
+    --red: #FF6B6B;
+    --orange: #FFA502;
+    --yellow: #FFD166;
+    --green: #06D6A0;
+    --blue: #118AB2;
+    --purple: #8338EC;
+    --pink: #FF006E;
+}
+
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive, sans-serif;
+}
+
+body {
+    background-color: #FFF9F4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* EFFETTI SPECIALI */
+.rainbow-text {
+    background: linear-gradient(45deg, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 8s ease infinite;
+    background-size: 400% 400%;
+}
+
+.rainbow-bg {
+    background: linear-gradient(45deg, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink));
+    background-size: 400% 400%;
+    animation: rainbow 8s ease infinite;
+    border: none;
+}
+
+.rainbow-hover:hover {
+    background: linear-gradient(45deg, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink));
+    background-size: 400% 400%;
+    animation: rainbow 8s ease infinite;
+}
+
+.rainbow-icon {
+    background: linear-gradient(45deg, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 8s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+.pop-animation {
+    animation: pop 2s infinite alternate;
+}
+
+@keyframes pop {
+    0% { transform: scale(1) }
+    50% { transform: scale(1.05) }
+    100% { transform: scale(1) }
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--pink);
+}
+
+.logo i {
+    font-size: 2.2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: var(--pink);
+}
+
+.cta-button {
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 10%;
+    background: linear-gradient(135deg, #FFF0F5 0%, #E0F7FF 100%);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    color: #666;
+}
+
+.hero-image img {
+    max-width: 100%;
+    transform: rotate(-10deg);
+}
+
+/* FLAVORS SECTION */
+.flavors {
+    padding: 5% 10%;
+    text-align: center;
+}
+
+.flavors h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.flavors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.flavor-card {
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    color: white;
+    transition: all 0.3s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.flavor-card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.flavor-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.flavor-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* BENEFITS SECTION */
+.benefits {
+    padding: 5% 10%;
+    background: linear-gradient(135deg, #E0F7FF 0%, #FFF0F5 100%);
+    text-align: center;
+}
+
+.benefits h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.benefit {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    width: 250px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.benefit:hover {
+    transform: scale(1.05);
+}
+
+.benefit i {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    padding: 5% 10%;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 3px solid #FFD166;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.testimonial span {
+    font-weight: bold;
+    color: var(--pink);
+}
+
+/* CTA SECTION */
+.cta {
+    padding: 5% 10%;
+    text-align: center;
+    background: linear-gradient(135deg, #FFEEF2 0%, #E0F7FF 100%);
+}
+
+.cta h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(45deg, var(--red), var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink));
+    background-size: 400% 400%;
+    animation: rainbow 8s ease infinite;
+    color: white;
+    padding: 3rem 10%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-image {
+        margin-top: 3rem;
+    }
+}
